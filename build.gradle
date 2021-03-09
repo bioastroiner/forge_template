@@ -60,9 +60,9 @@ minecraft {
             property 'forge.logging.markers', 'REGISTRIES'
             property 'forge.logging.console.level', 'debug'
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
-            args '--mod', 'examplemod', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
+            args '--mod', 'modid', '--all', '--output', file('src/generated/resources/'), '--existing', file('src/main/resources/')
             mods {
-                examplemod {
+                modid {
                     source sourceSets.main
                 }
             }
@@ -74,11 +74,20 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-    
+    maven {
+        name = "Progwml6 maven"
+        url = "https://dvs1.progwml6.com/files/maven/"
+    }
+    maven {
+        name = "ModMaven"
+        url = "https://modmaven.k-4u.nl"
+    }
 }
 
 dependencies {
-
+minecraft 'net.minecraftforge:forge:project.minecraft_version-project.forge_version'
+//compileOnly fg.deobf("mezz.jei:jei-1.16.3:7.+:api")
+//runtimeOnly fg.deobf("mezz.jei:jei-1.16.3:7.+")    
 }
 
 license {
