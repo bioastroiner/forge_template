@@ -1,4 +1,20 @@
-@Mod.EventBusSubscriber(modid = modid, bus = Mod.EventBusSubscriber.Bus.MOD)
+package com.bioast.modid.datagen;
+
+import com.bioast.modid.datagen.providers.client.ModBlockStateProvider;
+import com.bioast.modid.datagen.providers.client.ModItemModelProvider;
+import com.bioast.modid.datagen.providers.server.loottables.ModLootTableProvider;
+import com.bioast.modid.datagen.providers.server.recipes.ModRecipeProvider;
+import com.bioast.modid.datagen.providers.server.tags.ModBlockTagsProvider;
+import com.bioast.modid.datagen.providers.server.tags.ModItemTagsProvider;
+import net.minecraft.data.DataGenerator;
+import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
+
+import static net.minecraftforge.versions.forge.ForgeVersion.MOD_ID;
+
+@Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public final class DataGenerators {
     private DataGenerators() {}
 

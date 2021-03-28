@@ -1,6 +1,14 @@
+package com.bioast.modid.datagen.providers.client;
+
+import net.minecraft.data.DataGenerator;
+import net.minecraftforge.client.model.generators.BlockStateProvider;
+import net.minecraftforge.common.data.ExistingFileHelper;
+
+import static net.minecraftforge.versions.forge.ForgeVersion.MOD_ID;
+
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, modid, exFileHelper);
+        super(gen, MOD_ID, exFileHelper);
     }
 
     @Override
