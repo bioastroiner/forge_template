@@ -12,6 +12,9 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
+String map_ch = project.mappings_channel
+String map_vr = project.mappings_version
+
 version = "${project.minecraft_version}-${project.mod_version}"
 group = project.maven_group
 archivesBaseName = project.archives_base_name
@@ -31,7 +34,7 @@ minecraft {
     //
     // Use non-default mappings at your own risk. they may not always work.
     // Simply re-run your setup task after changing the mappings to update your workspace.
-    mappings channel: 'official', version: '1.16.5'
+    mappings channel: map_ch, version: map_vr
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
     
     // accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')

@@ -8,14 +8,14 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static net.minecraftforge.versions.forge.ForgeVersion.MOD_ID;
+import static com.bioast.modid.core.ModName.MOD_ID;
 
 @Mod(MOD_ID)
 public class ModName
 {
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 	
-	public static final String MOD_ID = "modid";
+	public static final String MOD_ID = "examplemod";
 
     public ModName() {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);

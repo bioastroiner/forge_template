@@ -3,7 +3,7 @@ modLoader="javafml"
 loaderVersion="[36,)"
 license="All rights reserved"
 [[mods]]
-modId="modid"
+modId="examplemod"
 version="${file.jarVersion}"
 displayName="Example Mod"
 logoFile="logo.png"
@@ -12,14 +12,14 @@ authors="BioAst"
 description='''
 '''
 
-[[dependencies.modid]]
+[[dependencies.examplemod]]
     modId="forge"
     mandatory=true
     versionRange="[36,)"
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
-[[dependencies.modid]]
+[[dependencies.examplemod]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.16.5,1.17)"
